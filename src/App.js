@@ -1,22 +1,28 @@
 import React, { useState } from "react";
-import Decrement from "./ component/Decrement";
-import Increment from "./ component/Increment";
 import Buttons from "./ component/Buttons";
 // import logo from "./logo.svg";
 // import './App.css';
 
-function App() {
-  // const number = useState(0);
+const App = () => {
+  const [number, count] = useState(0);
+  const Plus = () => {
+    count(number + 1);
+  };
+
+  const Minus = () => {
+    count(number - 1);
+  };
   return (
     <div>
-      <Buttons></Buttons>
-      {/* <Increment></Increment>
-      <Decrement></Decrement> */}
-      {/* <Increment />
+      <Buttons numberProp={number} onClickProp={Plus}>
+        +
+      </Buttons>
       {number}
-      <Decrement /> */}
+      <Buttons numberProp={number} onClickProp={Minus}>
+        -
+      </Buttons>
     </div>
   );
-}
+};
 
 export default App;

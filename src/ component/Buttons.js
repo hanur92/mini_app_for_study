@@ -1,12 +1,8 @@
 import React, { useState } from "react";
-function Buttons() {
-  const [number, count] = useState(0);
-
+function Buttons({ numberProp, onClickProp }) {
   return (
     <div>
-      <button onClick={() => count(number + 1)}>+</button>
-      {number}
-      <button onClick={() => count(number - 1)}>-</button>
+      <button onClick={onClickProp}>{numberProp}</button>
     </div>
   );
 }
