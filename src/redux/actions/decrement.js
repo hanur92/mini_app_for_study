@@ -1,5 +1,5 @@
-const DECREMENT = 'DECREMENT'
+const DECREMENT = "DECREMENT";
 
-export const decrement =(=>({
-    type:DECREMENT
-}))
+export const decrement = () => ({
+  type: DECREMENT,
+});
